@@ -21,13 +21,11 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    {"folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},}
-  install = { colorscheme = { "tokyonight-night" } },
+    {"folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}},
+  },
+  install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
-  })
+})
 
 require('tokyonight').setup {
     theme='tokyonight-night',
@@ -35,3 +33,5 @@ require('tokyonight').setup {
   }
 
 vim.opt.number = true
+vim.cmd("colorscheme tokyonight-night")
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
